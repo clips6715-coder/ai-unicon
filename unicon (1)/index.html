@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Explainer Video Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#4F46E5',
+              'brand-secondary': '#7C3AED',
+              'dark-bg': '#0F172A',
+              'dark-card': '#1E293B',
+              'dark-border': '#334155',
+              'light-text': '#F1F5F9',
+              'medium-text': '#94A3B8',
+            },
+            animation: {
+              'gradient-bg': 'gradient-bg 15s ease infinite',
+              'subtle-pulse': 'subtle-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              'gradient-bg': {
+                '0%, 100%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+              },
+              'subtle-pulse': {
+                '0%, 100%': { opacity: 1 },
+                '50%': { opacity: .9 },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.1",
+    "@google/generative-ai": "https://aistudiocdn.com/@google/generative-ai@^0.24.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0",
+    "@vercel/node": "https://aistudiocdn.com/@vercel/node@^5.3.23"
+  }
+}
+</script>
+<!-- Add Babel to transpile JSX/TS in the browser -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-dark-bg text-light-text">
+    <div id="root"></div>
+    <!-- Add the entry point script for the React app, with type="text/babel" -->
+    <script type="text/babel" data-type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
